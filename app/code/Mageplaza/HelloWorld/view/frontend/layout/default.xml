@@ -1,9 +1,15 @@
 <?xml version="1.0"?>
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
-        <referenceContainer name="after.body.start">
-            <block class="Magento\Framework\View\Element\Template" name="otthi.template" template="Mageplaza_HelloWorld::helo.phtml"/>
-        </referenceContainer>
-
-    </body>
+    <referenceBlock name="footer_links">
+        <block class="Magento\Framework\View\Element\Html\Link\Current" name="catalog-search-advanced-link">
+            <arguments>
+                <argument name="label" xsi:type="string" translate="true">click Advanced Search</argument>
+            </arguments>
+        </block>
+    </referenceBlock>
+        <referenceContainer name ="footer">
+        <referenceBlock name="form.subscribe" template="Mageplaza_HelloWorld::subscribe.phtml"/>
+        </referenceContainer >
+</body>
 </page>
